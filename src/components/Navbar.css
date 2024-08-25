@@ -1,0 +1,151 @@
+.navbar-container{
+    display: flex;
+    justify-content:space-between;
+    padding: 1.2rem 2.4rem;
+    
+    
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color-scheme:light dark;
+    background-color: #fa67a2;
+    
+    position:fixed;
+    width: 100%;
+    z-index: 9999;
+top:0;
+
+}
+
+.logo-brand h1 {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+    
+
+ul.navbar-list {
+  display: flex;
+   
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+    
+
+ ul.navbar-list li {
+    position: relative;
+} 
+
+ul.navbar-list li a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+ ul.navbar-list li a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom:-30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    transition: width 0.3s ease;
+} 
+
+ul.navbar-list li a:hover:before,
+ul.navbar-list li a.active-link:before {
+    width: 100%;
+}  
+
+ul.navbar-list li a:hover,
+ul.navbar-list li a.active-link {
+    color: #FFF;
+    background-color: #fa67a2;
+    border-radius: 5px;
+} 
+/* Navbar.css */
+
+
+
+/* .logo-brand h1 {
+    color: #FFFFFF;
+    margin: 0;
+} */
+
+/* .navbar-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+} */
+
+/* .navbar-list li {
+    margin-left: 20px;
+} */
+
+/* .navbar-list a {
+    color: #FFFFFF;
+    text-decoration: none;
+} */
+
+/* .navbar-list .active-link {
+    font-weight: bold;
+    text-decoration: underline;
+} */
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+       
+        display: block;
+    }
+    .logo-brand{
+        position: relative;
+    }
+    .logo-brand h1{
+        display: inline-block;
+        
+    }
+   
+    .hamburger {
+        display:inline-block;
+        position: absolute;
+        top:0;
+        right:0;
+        width: fit-content;
+    }
+    ul.navbar-list{
+        display: none;
+    }
+    .navbar-list {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin:2px auto;
+        
+    }
+    ul.navbar-list li a:before{
+        bottom: -10%;
+    }
+    .navbar-list.open {
+        display: flex;
+        
+    }
+
+    .navbar-list li {
+        margin: 5px auto;
+        line-height: 1.5rem;
+    }
+   
+}
+
+
